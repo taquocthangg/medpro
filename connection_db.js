@@ -7,7 +7,8 @@ const sequelize = new Sequelize(process.env.POSTGRES_DATABASE, process.env.POSTG
     dialectOptions: {
         "ssl": {
            "require": true,
-           "rejectUnauthorized": false
+           "rejectUnauthorized": false,
+            "dialectModule": pg,
         }
       }
 });
